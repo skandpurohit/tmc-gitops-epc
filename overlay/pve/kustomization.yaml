@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../../base/
+  - pve-secret.yaml
 
 replicas:
   - name: nginx-deployment-epc
@@ -12,4 +13,4 @@ commonLabels:
 configMapGenerator:
   - name: pve-configmap
     literals:
-      - endpoint="pve.example.com""
+      - endpoint="pve.example.com"
