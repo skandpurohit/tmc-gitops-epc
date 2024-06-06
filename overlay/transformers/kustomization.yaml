@@ -6,3 +6,8 @@ resources:
 replicas:
   - name: nginx-deployment-epc
     count: 1
+
+configMapGenerator:
+  - name: transformer-html-configmap
+    literals:
+      - endpoint="transformer.example.com"
