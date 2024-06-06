@@ -8,3 +8,8 @@ replicas:
     count: 3
 commonLabels:
   team: pve
+
+configMapGenerator:
+  - name: pve-configmap
+    literals:
+      - endpoint="pve.example.com""
